@@ -1,80 +1,15 @@
-# **Homework Assignment: Refactoring MonolithicAdventureGame Using SOLID Principles**
+/ 🏹 Monolithic Adventure Game – SOLID Refactoring  
+// 📌 Project Overview  
+This project is a **refactored version** of a previously **monolithic Adventure Game**, now structured according to **SOLID principles**.  
+The main goal was to improve **code readability, maintainability, and scalability**.  
+/// 🔧 Key Changes  
+1. **Decoupled the monolithic class into separate components**  
+2. **Applied SRP (Single Responsibility Principle)** – Each class now has a **single responsibility**  
+3. **Ensured OCP (Open/Closed Principle)** – New enemies and items can be added **without modifying existing code**  
+4. **Implemented DIP (Dependency Inversion Principle)** – Reduced **tight coupling** by using interfaces  
+5. **Followed LSP (Liskov Substitution Principle) and ISP (Interface Segregation Principle)** – Made sure subclasses can **replace** their parent classes without breaking the system  
 
-## **Objective**
-The goal of this assignment is to refactor a **monolithic game simulation** into a well-structured, **SOLID-compliant** design by separating concerns, introducing abstractions, and ensuring maintainability.
-
----
-
-## **Monolithic Code Base**
-You have been provided with a **monolithic** implementation of an adventure game where:
-- **Player Management**: Health, experience, and inventory are handled within the same class.
-- **Combat System**: Enemy encounters and damage calculations are tightly coupled.
-- **Item Management**: Items are picked up and stored in the same monolithic class.
-- **Level Progression**: Game levels, enemy spawns, and resets are handled within a single method.
-
----
-
-## **How to Approach the Refactoring**
-
-### **1. Identify Responsibilities**
-Break the existing **MonolithicAdventureGame** class into distinct components:
-
-| Responsibility           | Suggested Class |
-|-------------------------|----------------|
-| **Player Management**  | `Player` |
-| **Combat System**       | `CombatManager` |
-| **Enemy Handling**      | `EnemyManager` |
-| **Item Handling**       | `ItemManager` |
-| **Level Progression**   | `LevelManager` |
-| **Score Management**    | `ScoreManager` |
-
----
-
-### **2. Apply SOLID Principles**
-
-#### **✅ Single Responsibility Principle (SRP)**
-- Each class should focus on **only one** responsibility.
-- **Example:** The `Player` class should not handle scoring or enemy interactions.
-
-#### **✅ Open/Closed Principle (OCP)**
-- The system should be **open for extension** but **closed for modification**.
-- **Example:** New enemy types should be **added** without modifying the existing logic.
-
-#### **✅ Dependency Inversion Principle (DIP)**
-- High-level modules should not depend on **low-level modules**.
-- Use **interfaces** where applicable to **decouple dependencies**.
-- **Example:** The `CombatManager` should rely on an `IEnemy` interface rather than concrete `Enemy` classes.
-
-#### **✅ Liskov Substitution Principle (LSP)**
-- Any subclass should **replace** its superclass **without breaking functionality**.
-- **Example:** A `Zombie` or `Vampire` class should be interchangeable without modifying the combat system.
-
-#### **✅ Interface Segregation Principle (ISP)**
-- Avoid **large, bloated interfaces**—split them into **focused**, smaller interfaces.
-- **Example:** Instead of a **single** `GameEntity` interface, create `IAttackable`, `IDamageable`, and `IItemInteractable`.
-
----
-
-## **3. Documentation and UML Diagrams**
-### **Write-Up**
-- Explain **how your refactoring applies SOLID principles**.
-- Justify **why** you structured the new classes as you did.
-
-### **UML Diagrams (Optional, but Recommended)**
-- **After Refactoring** → Show the **new modular structure** with dependencies.
-
----
-
-## **Submission Guidelines**
-- **Submit:**
-  1. **Refactored Java Code** (`.java` files)
-  2. **Documentation** (`README.md` or `.pdf`)
-  3. **UML Diagrams** (`.png`, `.jpg`, or `.pdf`)
-- **Submission Method:** GitHub Repository
-
----
-
-## **Example Folder Structure (After Refactoring)**
+## 🏗 Folder Structure  
 ```
 📂 SOLID-Refactored-AdventureGame
 │── 📂 src
@@ -105,3 +40,23 @@ Break the existing **MonolithicAdventureGame** class into distinct components:
 │
 │── README.md
 ```
+## 🚀 How to Run  
+1. Clone the repository:  
+   ```sh
+   git clone https://github.com/yourusername/SOLID-Refactored-AdventureGame.git
+   cd SOLID-Refactored-AdventureGame
+   ```
+2. Compile and run the game:  
+   ```sh
+   javac src/MainGame.java  
+   java src.MainGame
+   ``
+## 📚 Documentation  
+- **UML Diagrams**: Before and after refactoring (`docs/UML-After-Refactor.png`)  
+- **Refactoring Report**: Detailed explanation of **how SOLID principles were applied** (`docs/SOLID-Refactoring-Report.pdf`)  
+## 🎯 Future Improvements  
+- Add **new enemy types** dynamically  
+- Implement **a better scoring system**  
+- Improve **combat mechanics with special attacks**  
+---
+🛠 **Developed as part of a SOLID refactoring assignment**.  
