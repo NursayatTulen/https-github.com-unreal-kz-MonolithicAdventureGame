@@ -43,7 +43,7 @@ The main goal was to improve **code readability, maintainability, and scalabilit
 ## 🚀 How to Run  
 1. Clone the repository:  
    ```sh
-   git clone https://github.com/yourusername/SOLID-Refactored-AdventureGame.git
+   git clone https://github.com/NursayatTulen/https-github.com-unreal-kz-MonolithicAdventureGame.git
    cd SOLID-Refactored-AdventureGame
    ```
 2. Compile and run the game:  
